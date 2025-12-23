@@ -23,7 +23,8 @@ namespace Mariner {
             LogMethod LogMethod = LogMethod::STD_PRINT;
 
             void PrintOut(LogType Logtype, MString Message);
-
+            void ClearOutput();
+            MTable<MString> GetOutput();
 
         protected:
 
@@ -32,7 +33,7 @@ namespace Mariner {
 
         private:
 
-            MTable<MString> LogQueue = {};
+            MTable<MString> LogOutput = {};
 
     };
 

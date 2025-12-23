@@ -8,6 +8,8 @@ void Mariner::LogService::PrintOut(LogType LogType, MString Message) {
 
     Message = Message.Concatenate("\n");
 
+    this->LogOutput.Add(Message);
+
     switch (this->LogMethod) {
 
         case STD_PRINT: {
